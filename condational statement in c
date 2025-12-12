@@ -1,0 +1,29 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+
+
+
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    
+    char number[10][10] = {"one","two","three","four","five","six","seven","eight","nine","ten"};
+    
+
+    
+    if(n>=1 && n<10)
+        printf("%s",number[n-1]);
+    else
+        printf("Greater than 9");
+  return 0;
+}
