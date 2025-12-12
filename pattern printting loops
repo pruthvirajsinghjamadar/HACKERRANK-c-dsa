@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{   int n;
+    int absRow, absColumn;
+    scanf("%d", &n);
+    
+    for(int row = n; row >= -n; row--)
+    {
+        if(row == 0 || row == -1)
+        {
+            continue;
+        }
+        for(int column = n; column >= -n; column--)
+        {
+            if(column == 0 || column == -1)
+            {
+                continue;
+            }
+            absRow = abs(row);
+            absColumn = abs(column);
+            if(absColumn <= absRow)
+            {
+                printf("%d ", absRow);
+            }
+            else
+            {
+                printf("%d ", absColumn);
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
